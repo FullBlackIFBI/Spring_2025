@@ -1,1 +1,309 @@
-����� �� ��2 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Агентство Недвижимости "HH FER"</title>
+  <link rel="shortcut icon" href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTPhc2TBZzNu1pUNRrZnLw-sUA-POKAkQ6o1qnLoIao37xIAaaP" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url("https://runews24.ru/assets/images/uploads/2025/2/7/eeb477177975b29d56c20a29a1900a5b.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    .corner-gif {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+      z-index: 1000;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease;
+    }
+    .corner-gif:hover {
+      transform: scale(1.1);
+    }
+
+    header {
+      background: rgba(0, 51, 102, 0.85);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    .listings {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .property {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+      background: #fafafa;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    .price {
+      font-weight: bold;
+      color: #006600;
+    }
+
+    .about {
+      background: rgba(232, 240, 254, 0.95);
+      border-radius: 6px;
+      padding: 25px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: rgba(0, 51, 102, 0.85);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    
+    .slider {
+      position: relative;
+      width: 400px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+    }
+
+    .slide {
+      display: none;
+      width: 400px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slider .prev,
+    .slider .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 0 6px 6px 0;
+      user-select: none;
+    }
+
+    .slider .prev {
+      left: 0;
+      border-radius: 6px 0 0 6px;
+    }
+    .slider .next {
+      right: 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    
+    #extra-page {
+      display: none;
+      background: rgba(255, 255, 255, 0.95);
+      min-height: 100vh;
+      padding: 40px 30px;
+      box-sizing: border-box;
+      color: #222;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    #extra-page h2 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #003366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      user-select: none;
+    }
+    .back-button:hover {
+      background-color: #0055aa;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <img
+    src="https://gifs.obs.ru-moscow-1.hc.sbercloud.ru/1c8b7a5a696c5c80abe3a4c2143bf678e9bf6a12d1637dbf3e84bc93bddec24f.gif"
+    alt="Анимация"
+    class="corner-gif"
+    onclick="showExtraPage()"
+    title="Подробнее о нас"
+  />
+
+
+  <div id="main-page">
+
+    <header>
+      <h1>Агентство недвижимости "HH FER"</h1>
+      <p>Найдём идеальный дом для вас и вашей семьи</p>
+    </header>
+
+    <section class="listings">
+      <h2>Актуальные предложения</h2>
+
+      <div class="property">
+        <div class="slider">
+          <img class="slide active" src="https://images.cdn-cian.ru/images/2432255241-4.jpg" alt="Квартира 1" />
+          <img class="slide" src="https://images.cdn-cian.ru/images/2398392178-4.jpg" alt="Квартира 1-3" />
+          <img class="slide" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRb4djm1uG7Bi0vcwVr5AoWM0-xdgMOCd83MXd9QqyweCiQZUzr" alt="Квартира 1-3" />
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+        <h3>Квартира в центре Нижнего Новгорода</h3>
+        <p>3-комнатная квартира, 57 м², р-н Советский, мкр. проспект Гагарина, ул. Героя Жидкова, 6. Современный ремонт, парковка, охрана.</p>
+        <p class="price">Цена: 7 100 000 ₽</p>
+      </div>
+
+      <div class="property">
+        <div class="slider">
+          <img class="slide active" src="https://img.dmclk.ru/s960x640q80/vitrina/owner/df/4b/df4b27899b664b69bc70baeb543e3432.jpg" alt="Дом 1" />
+          <img class="slide" src="https://i.pinimg.com/736x/fe/f6/71/fef671ee77a3159e45eb6ed38d47d652.jpg" alt="Дом 2" />
+          <img class="slide" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQYWJl2CIRMbj4LTyMCHGhjGYu2yY89GOlBgoNXvckqtGh-eAb_" alt="Дом 3" />
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+        <h3>Коттедж в Нижегородской области</h3>
+        <p>Загородный дом, 240 м², участок 12 соток. Газ, вода, отопление. Рядом лес и озеро.</p>
+        <p class="price">Цена: 35 000 000 ₽</p>
+      </div>
+
+      <div class="property">
+        <div class="slider">
+          <img class="slide active" src="https://cdn1.ozone.ru/s3/multimedia-1-o/7418832756.jpg" alt="Апартаменты 1" />
+          <img class="slide" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR3AchJjLqY1loidNfCLXwdEdLmzj1rgvnMOccEkF8LOCeJo2Y6" alt="Апартаменты 2" />
+          <img class="slide" src="https://90.img.avito.st/image/1/1.GMgEmba-tCESORYgOPU74nc4tie2LrAhtknVK7qatYOxOrY.XxfR5afwLWG_JIMKEu-sVYpmHbHuGiPexhPtrANBre4" alt="Апартаменты 3" />
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+        <h3>Апартаменты с Видом на Реку</h3>
+        <p>Элитные апартаменты, 100 м², первая линия. Панорамный вид, охрана, бассейн.</p>
+        <p class="price">Цена: 25 000 000 ₽</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>О компании</h2>
+      <p>
+        Мы — агентство недвижимости "HH FER", работаем на рынке более 10 лет.
+        Наши специалисты помогают клиентам подобрать недвижимость в Нижнем Новгороде и ближайших городах.
+        Мы сопровождаем сделки "под ключ": от подбора объекта до регистрации в Росреестре.
+      </p>
+      <ul>
+        <li>Продажа и покупка квартир</li>
+        <li>Загородная и коммерческая недвижимость</li>
+        <li>Юридическое сопровождение</li>
+        <li>Ипотечное консультирование</li>
+      </ul>
+    </section>
+
+    <footer>
+      <h2>Контакты</h2>
+      <p>Адрес: д. Афонино, ул. Зеленая, д.32</p>
+      <p>Телефон: +7 (910) 898-79-27</p>
+      <p>Email: zheka3016@gmail.com</p>
+    </footer>
+
+  </div>
+
+  
+  <div id="extra-page">
+    <h2>Подробнее о компании HH FER</h2>
+    <p>
+      Агентство недвижимости "HH FER" предоставляет профессиональные услуги в сфере недвижимости более 10 лет.
+      Мы гарантируем индивидуальный подход к каждому клиенту и полное сопровождение сделок.
+    </p>
+    <p>
+      Наши услуги включают:
+      <ul>
+        <li>Экспертный подбор недвижимости</li>
+        <li>Юридическое сопровождение и консультации</li>
+        <li>Помощь в ипотечном кредитовании</li>
+        <li>Продажа и покупка квартир, домов и коммерческой недвижимости</li>
+      </ul>
+    </p>
+    <button class="back-button" onclick="showMainPage()">← Назад</button>
+  </div>
+
+  <script>
+  
+    document.querySelectorAll('.slider').forEach(slider => {
+      let index = 0;
+      const slides = slider.querySelectorAll('.slide');
+      const prevBtn = slider.querySelector('.prev');
+      const nextBtn = slider.querySelector('.next');
+
+      function showSlide(i) {
+        slides.forEach((slide, idx) => {
+          slide.classList.toggle('active', idx === i);
+        });
+      }
+
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      });
+    });
+
+
+    function showExtraPage() {
+      document.getElementById('main-page').style.display = 'none';
+      document.getElementById('extra-page').style.display = 'block';
+      document.querySelector('.corner-gif').style.display = 'none'; 
+      window.scrollTo(0,0);
+    }
+
+    function showMainPage() {
+      document.getElementById('extra-page').style.display = 'none';
+      document.getElementById('main-page').style.display = 'block';
+      document.querySelector('.corner-gif').style.display = 'block'; 
+      window.scrollTo(0,0);
+    }
+  </script>
+</body>
+</html>
